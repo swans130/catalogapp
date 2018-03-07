@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% include "header.html" %}
+{% block content %}
+		{% for c in category %}
+			<div class="row">
+				<div class="col-md-4">
+					<h3>{{c.name}}</h3>
+				</div>
+				{% for i in items %}
+					<div class="col-md-8">
+						<h4>{{i.name}}</h4>
+					</div>
+			</div>
+	{% endfor %}
+{% endblock %}
