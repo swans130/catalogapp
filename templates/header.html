@@ -5,7 +5,7 @@
 				<h4 class="text-left"><a href="/">Catalog Project</a></h2>
 			</div>
 			<div class="col-md-3">
-				{% if login_session['username'] %}
+				{% if not session['username'] %}
 				<h4 class="text-right"><a href="/login">Login</a></h4>
 				{% else %}
 				<h4 class="text-right"><a href="/gdisconnect">Logout</a></h4>

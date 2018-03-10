@@ -2,17 +2,17 @@
 {% include "header.html" %}
 {% block content %}
 <div class="row">
-		<div class="col-md-4">
-			{% for c in category %}
-				<h3><a href="{{url_for('show_items', category_name = c.name, category_id = c.id)}}">{{c.name}}</a></h3>
-			{% endfor %}
-		</div>
-		<div class="col-md-8">
-			{% for i in items %}
-			<h3><a href="{{url_for('show_item', item_id = i.id)}}">{{i.name}}</a></h3>
-			{% endfor %}
-			<br>
-			<h6><a href="{{url_for('add_item')}}">Add Item</a></h6>
-		</div>
+	<div class="col-md-4">
+		{% for c in category %}
+		<h3><a href="{{url_for('show_items', category_name = c.name, category_id = c.id)}}">{{c.name}}</a></h3>
+		{% endfor %}
+	</div>
+	<div class="col-md-8">
+		{% for i in items %}
+		<h3><a href="{{url_for('show_item', item_id = i.id)}}">{{i.name}}</a></h3>
+		{% endfor %}
+		<br>
+		<h6><a href="{{url_for('add_item')}}">Add Item</a></h6>
+	</div>
 </div>
 {% endblock %}

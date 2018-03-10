@@ -17,10 +17,6 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
 
-
-# To Do: Create dummy user
-
-
 # Categories
 category1 = Category(name="Electric Guitars")
 session.add(category1)
@@ -42,10 +38,10 @@ category5 = Category(name="Accessories")
 session.add(category5)
 session.commit()
 
-#Items
+# Items
 
 item1 = Item(name="Fender Guitar", description="A very fine Fender Guitar",
-		category=category1)
+             category=category1)
 session.add(item1)
 session.commit()
 
